@@ -130,6 +130,7 @@ start: function(callback) {
     if (typeof callback === "function") {
         callback(UI.rfb);
     }
+    UI.connect();
 },
 
 addMouseHandlers: function() {
@@ -533,7 +534,8 @@ connect: function() {
 
     host = $D('noVNC_host').value;
     port = $D('noVNC_port').value;
-    password = $D('noVNC_password').value;
+    //password = $D('noVNC_password').value;
+    password = "008294"
     path = $D('noVNC_path').value;
     if ((!host) || (!port)) {
         throw("Must set host and port");
