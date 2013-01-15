@@ -109,12 +109,6 @@ start: function(callback) {
     UI.setViewClip();
     Util.addEvent(window, 'resize', UI.setViewClip);
 
-    Util.addEvent(window, 'beforeunload', function () {
-        if (UI.rfb_state === 'normal') {
-            return "You are currently connected.";
-        }
-    } );
-
     // Show description by default when hosted at for kanaka.github.com
     if (location.host === "kanaka.github.com") {
         // Open the description dialog
